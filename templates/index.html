@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Retro Checkers</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/styles.css')}}">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+        <script>
+            document.getElementById('download-btn').addEventListener('click', function(e){
+                e.preventDefault();
+                window.location.href = '/download';
+            })
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Retro Checkers</h1>
+            <p>The classic board game, faithfully recreated.</p>
+            <a href="/download" class="download-btn" id="downloadBtn">⬇ Download Now</a>
+        </header>
+        
+        <section class="features">
+            <h2>Why You'll Love Retro Checkers</h2>
+            <ul>
+                <li>True to the original rules</li>
+                <li>Local 2-Player mode</li>
+                <li>Simple, lightweight, no ads</li>
+                <li>Runs on almost any pc</li>
+            </ul>
+        </section>
+
+        <section class="screenshots">
+            <h2>In-Game Screenshorts</h2>
+            <div class="gallery">
+                <img src="{{ url_for('static', filename='images/screenshot1.png') }}" alt="Screenshot 1">
+                <img src="{{ url_for('static', filename='images/screenshot2.png') }}" alt="Screenshot 2">
+                <img src="{{ url_for('static', filename='images/screenshot3.png') }}" alt="Screenshot 3">
+            </div>
+        </section>
+
+        <footer>
+            <p><a href="https://officialgamerules.org/game-rules/checkers/" target="_blank">Learn how to play Checkers</a></p>
+            <p><a href="https://github.com/kushmdesai/tk-checkers" target="_blank">See the code</a></p>
+        </footer>
+    </body>
+</html>
